@@ -66,7 +66,7 @@ image.addEventListener('mouseout', ()=>{
 //5 FORM PASSWORD BLUR
 password.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';
-});
+});d
 
 password.addEventListener('blur', (event) => {
   event.target.style.background = '';

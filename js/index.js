@@ -20,6 +20,10 @@ const bottomButtonsArray = Array.from(bottomButtons);
 const image = get('.topimg');
 const password = get('.form')
 const backgroundColor = get('body')
+const height = get('#height')
+const weight = get('#width')
+const allH4s = getAll('h4');
+const allH4sArray = Array.from(allH4s);
 
 
 
@@ -66,7 +70,7 @@ image.addEventListener('mouseout', ()=>{
 //5 FORM PASSWORD BLUR
 password.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';
-});d
+});
 
 password.addEventListener('blur', (event) => {
   event.target.style.background = '';
@@ -93,4 +97,23 @@ title.addEventListener('click', (event)=>{
 //8 BACKGROUND COLOR CHANGE ON CLICK
 backgroundColor.addEventListener('click', (event)=>{
   event.target.style.background = 'teal';
+})
+
+//9 WINDOW RESIZE REPORT
+reportWindowSize = () => {
+  height.textContent = window.innerHeight;
+  width.textContent = window.innerWidth;
+}
+
+window.onresize = reportWindowSize;
+
+
+
+//10 H4 COLOR CHANGE
+
+
+allH4sArray.forEach(event =>{
+  event.addEventListener('mouseover', (event)=>{
+    event.target.style.color = 'yellow';
+  })
 })
